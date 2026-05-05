@@ -2,179 +2,358 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>Tugas Portofolio - Abdan Rizki Fadhilah</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 
     <style>
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        body{
-            background:#eef2f7;
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            min-height:100vh;
-            padding: 50px 20px;
+        :root {
+            --blue: #2563eb;
+            --blue-light: #eff6ff;
+            --blue-mid: #bfdbfe;
+            --navy: #1e293b;
+            --slate: #334155;
+            --muted: #64748b;
+            --border: #e2e8f0;
+            --bg: #f1f5f9;
+            --white: #ffffff;
+            --amber-bg: #fffbeb;
+            --amber-border: #fde68a;
+            --radius: 14px;
+            --radius-sm: 8px;
         }
 
-        .container{
-            background:white;
-            width:100%;
-            max-width:850px;
-            padding:50px;
-            border-radius:12px;
-            box-shadow:0 10px 40px rgba(0,0,0,0.1);
+        body {
+            background: var(--bg);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: var(--slate);
+            line-height: 1.7;
+            padding: 16px;
         }
 
-        /* HEADER & BIODATA */
-        .header-bio {
-            text-align:center;
-            margin-bottom:40px;
-        }
-
-        .header-bio img {
-            width:150px;
-            height:150px;
-            border-radius:15px;
-            object-fit:cover;
-            margin-bottom:20px;
-            border:4px solid #2563eb;
-        }
-
-        .header-bio h2 {
-            color:#1e293b;
-            font-size: 26px;
-            margin-bottom:5px;
-        }
-
-        .header-bio p {
-            color:#64748b;
-            font-size:16px;
-        }
-
-        .bio-table {
-            width:100%;
-            border-collapse:collapse;
-            margin: 30px 0;
-            background: #f8fafc;
-            border-radius: 8px;
+        /* ── CONTAINER ─────────────────────────────── */
+        .container {
+            background: var(--white);
+            width: 100%;
+            max-width: 860px;
+            margin: 0 auto;
+            border-radius: var(--radius);
+            box-shadow: 0 4px 30px rgba(0,0,0,0.08);
             overflow: hidden;
         }
 
+        /* ── HEADER ─────────────────────────────────── */
+        .header {
+            background: linear-gradient(135deg, #1d4ed8 0%, #2563eb 60%, #3b82f6 100%);
+            padding: 40px 24px 32px;
+            text-align: center;
+            position: relative;
+        }
+
+        .header::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0; right: 0;
+            height: 28px;
+            background: var(--white);
+            border-radius: 28px 28px 0 0;
+        }
+
+        .avatar-wrap {
+            display: inline-block;
+            position: relative;
+            margin-bottom: 16px;
+        }
+
+        .avatar-wrap img {
+            width: 110px;
+            height: 110px;
+            border-radius: 18px;
+            object-fit: cover;
+            border: 4px solid rgba(255,255,255,0.9);
+            display: block;
+        }
+
+        .avatar-placeholder {
+            width: 110px;
+            height: 110px;
+            border-radius: 18px;
+            background: rgba(255,255,255,0.2);
+            border: 4px solid rgba(255,255,255,0.6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 42px;
+        }
+
+        .header h2 {
+            color: #fff;
+            font-size: clamp(18px, 5vw, 24px);
+            font-weight: 800;
+            margin-bottom: 4px;
+            letter-spacing: -0.3px;
+        }
+
+        .header p {
+            color: rgba(255,255,255,0.8);
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        /* ── BIODATA TABLE ───────────────────────────── */
+        .bio-section {
+            padding: 32px 20px 20px;
+        }
+
+        .bio-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--blue-light);
+            border-radius: var(--radius-sm);
+            overflow: hidden;
+            font-size: 14px;
+        }
+
+        .bio-table tr:last-child td {
+            border-bottom: none;
+        }
+
         .bio-table td {
-            padding:12px 20px;
-            border-bottom: 1px solid #e2e8f0;
-            font-size:15px;
+            padding: 11px 16px;
+            border-bottom: 1px solid var(--blue-mid);
+            vertical-align: top;
         }
 
         .bio-table td:first-child {
-            width:200px;
-            font-weight:bold;
-            color:#1e293b;
+            font-weight: 700;
+            color: var(--navy);
+            width: 42%;
+            white-space: nowrap;
         }
 
-        hr {
-            margin:50px 0;
-            border:0;
-            border-top: 2px solid #f1f5f9;
+        .bio-table td:nth-child(2) {
+            width: 16px;
+            color: var(--muted);
+            padding-left: 0;
+            padding-right: 0;
         }
 
-        /* CONTENT STYLING */
-        .section-title {
-            text-align:center;
-            margin-bottom:30px;
+        .bio-table td:last-child {
+            color: var(--slate);
         }
 
-        .section-title h2 {
-            background: #2563eb;
-            color: white;
-            display: inline-block;
-            padding: 8px 25px;
+        /* ── DIVIDER ─────────────────────────────────── */
+        .divider {
+            height: 8px;
+            background: var(--bg);
+            margin: 8px 0;
+        }
+
+        /* ── SECTION ─────────────────────────────────── */
+        .section {
+            padding: 28px 20px;
+        }
+
+        .section-badge {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 24px;
+        }
+
+        .section-badge span {
+            background: var(--blue);
+            color: #fff;
+            padding: 7px 22px;
             border-radius: 50px;
-            font-size: 18px;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
             text-transform: uppercase;
-            letter-spacing: 1px;
         }
 
+        /* ── ARTICLE BODY ────────────────────────────── */
         .article-body {
-            color: #334155;
-            line-height: 1.8;
-            text-align: justify;
+            color: var(--slate);
+            font-size: 15px;
+            line-height: 1.85;
         }
 
         .article-body h3 {
-            color: #1e293b;
-            margin: 30px 0 15px 0;
-            font-size: 22px;
-            border-left: 5px solid #2563eb;
-            padding-left: 15px;
+            font-family: 'Lora', Georgia, serif;
+            font-size: clamp(17px, 4vw, 21px);
+            color: var(--navy);
+            font-weight: 600;
+            margin: 0 0 18px 0;
+            border-left: 4px solid var(--blue);
+            padding-left: 14px;
+            line-height: 1.4;
         }
 
         .article-body p {
-            margin-bottom: 20px;
+            margin-bottom: 16px;
+            text-align: justify;
         }
 
-        /* MARKETING MIX BOXES */
+        /* ── MIX GRID ────────────────────────────────── */
         .mix-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 15px;
-            margin: 25px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin: 20px 0;
         }
 
         .mix-item {
-            background: #f1f5f9;
-            padding: 20px;
-            border-radius: 8px;
-            border-left: 4px solid #3b82f6;
+            background: var(--blue-light);
+            padding: 16px;
+            border-radius: var(--radius-sm);
+            border-left: 4px solid var(--blue);
+            font-size: 14px;
         }
 
         .mix-item strong {
-            color: #2563eb;
+            color: var(--blue);
             display: block;
-            margin-bottom: 5px;
-            font-size: 17px;
+            margin-bottom: 6px;
+            font-size: 15px;
+            font-weight: 700;
         }
 
-        /* CASE STUDY BOX */
+        /* ── CASE STUDY ──────────────────────────────── */
         .case-study {
-            background-color: #fffbeb;
-            border: 1px solid #fef3c7;
-            padding: 30px;
-            border-radius: 12px;
-            margin: 40px 0;
+            background: var(--amber-bg);
+            border: 1px solid var(--amber-border);
+            border-radius: var(--radius);
+            padding: 20px 16px;
+            margin: 24px 0;
+        }
+
+        .case-study h3 {
+            font-family: 'Lora', Georgia, serif;
+            font-size: clamp(16px, 4vw, 20px);
+            color: var(--navy);
+            font-weight: 600;
+            margin-bottom: 16px;
+            border: none !important;
+            padding-left: 0 !important;
+            line-height: 1.4;
+        }
+
+        .img-placeholder {
+            margin: 0 0 18px 0;
+            border-radius: var(--radius-sm);
+            overflow: hidden;
+            background: #f1f5f9;
         }
 
         .img-placeholder img {
-            width: 100%;  
-            height: auto;  
-            max-height: 450px;
+            width: 100%;
+            height: auto;
+            max-height: 300px;
             object-fit: contain;
             display: block;
-            margin: 0 auto;
-            border-radius: 8px;
-}
+        }
+
+        .img-note {
+            font-size: 12px;
+            color: var(--muted);
+            text-align: center;
+            padding: 10px;
+            font-style: italic;
+        }
+
+        .opini-label {
+            font-weight: 700;
+            color: var(--navy);
+            font-size: 15px;
+            margin: 0 0 10px 0;
+            display: block;
+        }
 
         .analysis-list {
-            margin: 20px 0 20px 25px;
+            margin: 12px 0 16px 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
         }
 
         .analysis-list li {
-            margin-bottom: 15px;
+            font-size: 14px;
+            padding: 12px 14px;
+            background: rgba(255,255,255,0.7);
+            border-radius: var(--radius-sm);
+            border-left: 3px solid #f59e0b;
         }
 
+        .analysis-list li strong {
+            color: var(--navy);
+            display: block;
+            margin-bottom: 3px;
+        }
+
+        /* ── FOOTER ──────────────────────────────────── */
         .footer {
-            margin-top:60px;
-            text-align:center;
-            font-size:14px;
-            color:#94a3b8;
-            border-top: 1px solid #f1f5f9;
-            padding-top: 30px;
+            padding: 24px 20px;
+            text-align: center;
+            font-size: 13px;
+            color: var(--muted);
+            border-top: 1px solid var(--border);
+            background: var(--bg);
+        }
+
+        /* ── TABLET / DESKTOP ────────────────────────── */
+        @media (min-width: 640px) {
+            body {
+                padding: 32px 20px;
+            }
+
+            .header {
+                padding: 52px 40px 40px;
+            }
+
+            .avatar-wrap img,
+            .avatar-placeholder {
+                width: 140px;
+                height: 140px;
+            }
+
+            .bio-section {
+                padding: 36px 40px 24px;
+            }
+
+            .bio-table {
+                font-size: 15px;
+            }
+
+            .bio-table td:first-child {
+                width: 200px;
+            }
+
+            .section {
+                padding: 36px 40px;
+            }
+
+            .mix-grid {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 14px;
+            }
+
+            .case-study {
+                padding: 28px 24px;
+            }
+
+            .analysis-list li {
+                font-size: 15px;
+            }
         }
     </style>
 </head>
@@ -182,95 +361,117 @@
 
 <div class="container">
 
-    <!-- BAGIAN 1: BIODATA -->
-    <div class="header-bio">
-        <img src="jpg/1.jpeg" alt="Foto Abdan Rizki Fadhilah">
+    <!-- ── HEADER / BIODATA ───────────────── -->
+    <div class="header">
+        <div class="avatar-wrap">
+            <img src="jpg/1.jpeg" alt="Foto Abdan Rizki Fadhilah"
+                 onerror="this.outerHTML='<div class=\'avatar-placeholder\'>👤</div>'">
+        </div>
         <h2>Abdan Rizki Fadhilah</h2>
-        <p>Mahasiswa Teknik Informatika - Semester 4</p>
+        <p>Mahasiswa Teknik Informatika &mdash; Semester 4</p>
     </div>
 
-    <table class="bio-table">
-        <tr><td>NIM</td><td>:</td><td>312410469</td></tr>
-        <tr><td>Program Studi</td><td>:</td><td>Teknik Informatika</td></tr>
-        <tr><td>Universitas</td><td>:</td><td>Universitas Pelita Bangsa</td></tr>
-        <tr><td>Tempat, Tanggal Lahir</td><td>:</td><td>Bekasi, 12 Januari 2004</td></tr>
-        <tr><td>Alamat</td><td>:</td><td>Bekasi, Jawa Barat</td></tr>
-        <tr><td>Email</td><td>:</td><td>abdan@email.com</td></tr>
-        <tr><td>Hobi</td><td>:</td><td>Membaca, Coding, Olahraga</td></tr>
-    </table>
-
-    <hr>
-
-    <!-- BAGIAN 2: QUIZ 1 -->
-    <div class="section-title">
-        <h2>Quiz 1</h2>
+    <div class="bio-section">
+        <table class="bio-table">
+            <tr><td>NIM</td><td>:</td><td>312410469</td></tr>
+            <tr><td>Program Studi</td><td>:</td><td>Teknik Informatika</td></tr>
+            <tr><td>Universitas</td><td>:</td><td>Universitas Pelita Bangsa</td></tr>
+            <tr><td>Tempat, Tgl Lahir</td><td>:</td><td>Bekasi, 12 Januari 2004</td></tr>
+            <tr><td>Alamat</td><td>:</td><td>Bekasi, Jawa Barat</td></tr>
+            <tr><td>Email</td><td>:</td><td>abdanrizkyf@mgail.com</td></tr>
+            <tr><td>Hobi</td><td>:</td><td>Membaca, Coding, Olahraga</td></tr>
+        </table>
     </div>
 
-    <div class="article-body">
-        <h3>Integrasi Nilai Moral dan Spiritual dalam Pemasaran Moderen</h3>
-        <p>Pemasaran yang berintegritas dimulai dengan memahami bahwa konsumen adalah subjek yang harus didengar suaranya, bukan sekadar objek untuk mencari keuntungan semata. Secara konsep, pemasaran ini berpijak pada pilar Naqliyah (tuntunan agama), 'Aqliyah (ijtihad para ahli), dan 'Amaliyah (kepatuhan pada hukum negara). Karakteristik utamanya adalah menciptakan keberkahan dalam setiap transaksi, sehingga bisnis yang dijalankan tidak hanya mengejar materi di dunia, tetapi juga menjadi tabungan kebaikan untuk di akhirat, yang dilandasi oleh niat ibadah dalam setiap etos kerjanya.</p>
-        <p>Prinsip utama dalam pemasaran yang bermoral terletak pada keadilan dan transparansi yang nyata. Hal ini sejalan dengan praktik bisnis yang dicontohkan para pendahulu, di mana seorang pemasar wajib menjelaskan kondisi barang secara jujur, termasuk jika terdapat cacat atau kekurangan. Kepercayaan dipandang sebagai aset yang jauh lebih berharga daripada laba sesaat. Oleh karena itu, setiap akad atau perjanjian bisnis harus didasari oleh keridaan kedua belah pihak tanpa ada unsur paksaan atau penipuan, sehingga tercipta hubungan jangka panjang yang sehat antara penjual dan pembeli.</p>
-        <p>Etika dan akhlak seorang pemasar diuji melalui komitmennya untuk menjauhi segala bentuk kecurangan, seperti memanipulasi timbangan atau menimbun barang demi mempermainkan harga pasar. Seorang pelaku usaha yang bermoral akan menjaga persaingan tetap sehat dan tidak berusaha menjatuhkan kompetitor dengan cara yang tidak sah. Akhlak ini bukan sekadar formalitas, melainkan cerminan kualitas diri yang menghormati hak orang lain, termasuk hak pegawai dengan memberikan upah secara tepat waktu sebelum keringat mereka kering, sebagaimana prinsip keadilan dalam mengelola sumber daya manusia.</p>
-        <p>Dalam menjalankan strateginya, pemasaran yang bermartabat menerapkan konsep bauran pemasaran (Marketing Mix) yang santun dan bertanggung jawab. Produk yang ditawarkan harus dipastikan kehalalan dan manfaatnya, sementara harga ditetapkan secara wajar tanpa memberatkan konsumen. Lokasi distribusi pun harus dipilih pada tempat yang menjadi haknya, tanpa mengganggu ketertiban umum. Terakhir, promosi dilakukan dengan prinsip komunikasi yang benar (Qaulan Sadîda), santun (Qaulan Ma’rûfa), dan menyentuh jiwa (Qaulam Balîgho), sehingga pesan yang disampaikan membawa pengaruh positif bagi masyarakat luas.</p>
-    </div>
+    <div class="divider"></div>
 
-    <hr>
+    <!-- ── QUIZ 1 ──────────────────────────── -->
+    <div class="section">
+        <div class="section-badge"><span>Quiz 1</span></div>
 
-    <!-- BAGIAN 3: UTS (ARTIKEL PENUH) -->
-    <div class="section-title">
-        <h2>UTS Pendidikan Agama 4</h2>
-    </div>
+        <div class="article-body">
+            <h3>Integrasi Nilai Moral dan Spiritual dalam Pemasaran Modern</h3>
 
-    <div class="article-body">
-        <h3>Memahami Ghoror dalam Praktik Pemasaran Modern: Menghindari Jebakan Transaksi Fiktif</h3>
-        
-        <p>Dalam dunia bisnis kontemporer, strategi pemasaran sering kali digunakan untuk menarik minat konsumen secara masif. Namun, bagi seorang Muslim, kesuksesan pemasaran bukan hanya soal produk yang laku, melainkan tentang bagaimana produk tersebut memberikan keberkahan. Sebagaimana filosofi <em>Toyota Way</em> yang disebutkan oleh Yoshio Ishizaka, inti dari pemasaran adalah mendengarkan suara pasar. Dalam perspektif Islam, suara pasar tersebut harus dijawab dengan kejujuran dan transparansi.</p>
+            <p>Pemasaran yang berintegritas dimulai dengan memahami bahwa konsumen adalah subjek yang harus didengar suaranya, bukan sekadar objek untuk mencari keuntungan semata. Secara konsep, pemasaran ini berpijak pada pilar Naqliyah (tuntunan agama), 'Aqliyah (ijtihad para ahli), dan 'Amaliyah (kepatuhan pada hukum negara). Karakteristik utamanya adalah menciptakan keberkahan dalam setiap transaksi, sehingga bisnis yang dijalankan tidak hanya mengejar materi di dunia, tetapi juga menjadi tabungan kebaikan untuk di akhirat, yang dilandasi oleh niat ibadah dalam setiap etos kerjanya.</p>
 
-        <p>Salah satu larangan utama dalam transaksi ekonomi Islam adalah <strong>Ghoror</strong>. Berdasarkan materi perkuliahan, ghoror didefinisikan sebagai ketidakjelasan, pertaruhan, atau risiko yang melampaui batas (<em>uncertainty</em>). Rasulullah SAW secara tegas melarang jual beli ghoror karena dapat merugikan salah satu pihak dan menimbulkan perselisihan.</p>
+            <p>Prinsip utama dalam pemasaran yang bermoral terletak pada keadilan dan transparansi yang nyata. Hal ini sejalan dengan praktik bisnis yang dicontohkan para pendahulu, di mana seorang pemasar wajib menjelaskan kondisi barang secara jujur, termasuk jika terdapat cacat atau kekurangan. Kepercayaan dipandang sebagai aset yang jauh lebih berharga daripada laba sesaat. Oleh karena itu, setiap akad atau perjanjian bisnis harus didasari oleh keridaan kedua belah pihak tanpa ada unsur paksaan atau penipuan, sehingga tercipta hubungan jangka panjang yang sehat antara penjual dan pembeli.</p>
 
-        <p>Ghoror dapat terjadi dalam berbagai aspek <strong>Marketing Mix Islami</strong>:</p>
+            <p>Etika dan akhlak seorang pemasar diuji melalui komitmennya untuk menjauhi segala bentuk kecurangan, seperti memanipulasi timbangan atau menimbun barang demi mempermainkan harga pasar. Seorang pelaku usaha yang bermoral akan menjaga persaingan tetap sehat dan tidak berusaha menjatuhkan kompetitor dengan cara yang tidak sah. Akhlak ini bukan sekadar formalitas, melainkan cerminan kualitas diri yang menghormati hak orang lain, termasuk hak pegawai dengan memberikan upah secara tepat waktu sebelum keringat mereka kering, sebagaimana prinsip keadilan dalam mengelola sumber daya manusia.</p>
 
-        <div class="mix-grid">
-            <div class="mix-item">
-                <strong>Produk:</strong>
-                Barang atau jasa yang ditawarkan harus ada (eksis), jelas sifatnya, dan dapat diserahterimakan. Menjual barang yang tidak ada atau "fiktif" adalah bentuk ghoror berat.
-            </div>
-            <div class="mix-item">
-                <strong>Harga:</strong>
-                Harus ada kejelasan nilai tukar. Harga yang disembunyikan atau diubah secara sepihak tanpa kesepakatan awal termasuk unsur ketidakjelasan.
-            </div>
-            <div class="mix-item">
-                <strong>Promosi:</strong>
-                Islam mewajibkan prinsip <em>Qaulan Sadîda</em> (perkataan yang benar) dan <em>Qaulan Ma’rûfa</em> (perkataan yang baik). Promosi yang berlebihan, menipu, atau memberikan janji manis tanpa bukti nyata adalah pelanggaran etika serius.
-            </div>
-        </div>
-
-        <p>Menghindari ghoror bukan berarti membatasi keuntungan, melainkan membangun loyalitas jangka panjang berdasarkan kepercayaan (<em>trust</em>), yang merupakan modal utama dalam keberlanjutan bisnis.</p>
-
-        <!-- STUDI KASUS -->
-        <div class="case-study">
-            <h3 style="margin-top:0; border:none; padding:0;">Investasi Laundry Fiktif (Investasi Bodong)</h3>
-            
-            <div class="img-placeholder">
-    <img src="jpg/2.png" alt="Screenshot Metro TV">
-        </div>
-
-            <p><strong>Opini Pribadi & Analisis Syariah:</strong></p>
-            <p>Berdasarkan video dari YT channel Metro TV tersebut, kasus ini merupakan contoh nyata praktik <strong>Ghoror al-Ma'dum</strong> (ketidakjelasan pada objek yang tidak ada). Para korban dijanjikan investasi usaha laundry "autopilot" dengan modal ratusan juta rupiah, namun pada kenyataannya bisnis tersebut fiktif.</p>
-            
-            <p>Secara syariah, transaksi ini melanggar beberapa prinsip dasar:</p>
-            <ul class="analysis-list">
-                <li><strong>Pelanggaran Objek Transaksi:</strong> Barang/usaha yang diperjualbelikan tidak ada fisiknya, sehingga tidak memenuhi syarat sah jual beli dalam Islam.</li>
-                <li><strong>Pelanggaran Etika Promosi:</strong> Pelaku menggunakan media sosial untuk memberikan janji keuntungan tanpa risiko. Hal ini bertentangan dengan prinsip <em>Qaulan Sadîda</em>, karena informasi yang diberikan adalah kebohongan.</li>
-                <li><strong>Unsur Penipuan (Khida’):</strong> Transaksi ini tidak hanya mengandung ghoror (ketidakpastian), tetapi sudah masuk ke ranah penipuan sengaja untuk mengambil harta orang lain secara bathil.</li>
-            </ul>
-
-            <p>Menurut pendapat saya, fenomena ini menunjukkan betapa pentingnya literasi ekonomi Islam bagi masyarakat. Keinginan untuk mendapatkan keuntungan cepat sering kali membuat orang mengabaikan aspek kejelasan (<em>tabayyun</em>) terhadap objek investasi. Bisnis yang berkah seharusnya mengedepankan transparansi dan keadilan bagi semua pihak, bukan sekadar janji manis yang berujung kerugian.</p>
+            <p>Dalam menjalankan strateginya, pemasaran yang bermartabat menerapkan konsep bauran pemasaran (Marketing Mix) yang santun dan bertanggung jawab. Produk yang ditawarkan harus dipastikan kehalalan dan manfaatnya, sementara harga ditetapkan secara wajar tanpa memberatkan konsumen. Lokasi distribusi pun harus dipilih pada tempat yang menjadi haknya, tanpa mengganggu ketertiban umum. Terakhir, promosi dilakukan dengan prinsip komunikasi yang benar (Qaulan Sadîda), santun (Qaulan Ma'rûfa), dan menyentuh jiwa (Qaulam Balîgho), sehingga pesan yang disampaikan membawa pengaruh positif bagi masyarakat luas.</p>
         </div>
     </div>
 
+    <div class="divider"></div>
+
+    <!-- ── UTS ────────────────────────────── -->
+    <div class="section">
+        <div class="section-badge"><span>UTS Pendidikan Agama 4</span></div>
+
+        <div class="article-body">
+            <h3>Memahami Ghoror dalam Praktik Pemasaran Modern: Menghindari Jebakan Transaksi Fiktif</h3>
+
+            <p>Dalam dunia bisnis kontemporer, strategi pemasaran sering kali digunakan untuk menarik minat konsumen secara masif. Namun, bagi seorang Muslim, kesuksesan pemasaran bukan hanya soal produk yang laku, melainkan tentang bagaimana produk tersebut memberikan keberkahan. Sebagaimana filosofi <em>Toyota Way</em> yang disebutkan oleh Yoshio Ishizaka, inti dari pemasaran adalah mendengarkan suara pasar. Dalam perspektif Islam, suara pasar tersebut harus dijawab dengan kejujuran dan transparansi.</p>
+
+            <p>Salah satu larangan utama dalam transaksi ekonomi Islam adalah <strong>Ghoror</strong>. Berdasarkan materi perkuliahan, ghoror didefinisikan sebagai ketidakjelasan, pertaruhan, atau risiko yang melampaui batas (<em>uncertainty</em>). Rasulullah SAW secara tegas melarang jual beli ghoror karena dapat merugikan salah satu pihak dan menimbulkan perselisihan.</p>
+
+            <p>Ghoror dapat terjadi dalam berbagai aspek <strong>Marketing Mix Islami</strong>:</p>
+
+            <div class="mix-grid">
+                <div class="mix-item">
+                    <strong>Produk</strong>
+                    Barang atau jasa yang ditawarkan harus ada (eksis), jelas sifatnya, dan dapat diserahterimakan. Menjual barang yang tidak ada atau "fiktif" adalah bentuk ghoror berat.
+                </div>
+                <div class="mix-item">
+                    <strong>Harga</strong>
+                    Harus ada kejelasan nilai tukar. Harga yang disembunyikan atau diubah secara sepihak tanpa kesepakatan awal termasuk unsur ketidakjelasan.
+                </div>
+                <div class="mix-item">
+                    <strong>Promosi</strong>
+                    Islam mewajibkan prinsip <em>Qaulan Sadîda</em> (perkataan yang benar) dan <em>Qaulan Ma'rûfa</em> (perkataan yang baik). Promosi yang berlebihan, menipu, atau memberikan janji manis tanpa bukti nyata adalah pelanggaran etika serius.
+                </div>
+            </div>
+
+            <p>Menghindari ghoror bukan berarti membatasi keuntungan, melainkan membangun loyalitas jangka panjang berdasarkan kepercayaan (<em>trust</em>), yang merupakan modal utama dalam keberlanjutan bisnis.</p>
+
+            <!-- STUDI KASUS -->
+            <div class="case-study">
+                <h3>Investasi Laundry Fiktif (Investasi Bodong)</h3>
+
+                <div class="img-placeholder">
+                    <img src="jpg/2.png" alt="Screenshot Metro TV"
+                         onerror="this.parentElement.innerHTML='<p class=\'img-note\'>📺 Screenshot berita Metro TV<br>(gambar akan tampil saat file jpg/2.png tersedia)</p>'">
+                </div>
+
+                <span class="opini-label">Opini Pribadi &amp; Analisis Syariah:</span>
+
+                <p>Berdasarkan video dari YT channel Metro TV tersebut, kasus ini merupakan contoh nyata praktik <strong>Ghoror al-Ma'dum</strong> (ketidakjelasan pada objek yang tidak ada). Para korban dijanjikan investasi usaha laundry "autopilot" dengan modal ratusan juta rupiah, namun pada kenyataannya bisnis tersebut fiktif.</p>
+
+                <p>Secara syariah, transaksi ini melanggar beberapa prinsip dasar:</p>
+                <ul class="analysis-list">
+                    <li>
+                        <strong>Pelanggaran Objek Transaksi</strong>
+                        Barang/usaha yang diperjualbelikan tidak ada fisiknya, sehingga tidak memenuhi syarat sah jual beli dalam Islam.
+                    </li>
+                    <li>
+                        <strong>Pelanggaran Etika Promosi</strong>
+                        Pelaku menggunakan media sosial untuk memberikan janji keuntungan tanpa risiko. Hal ini bertentangan dengan prinsip <em>Qaulan Sadîda</em>, karena informasi yang diberikan adalah kebohongan.
+                    </li>
+                    <li>
+                        <strong>Unsur Penipuan (Khida')</strong>
+                        Transaksi ini tidak hanya mengandung ghoror (ketidakpastian), tetapi sudah masuk ke ranah penipuan sengaja untuk mengambil harta orang lain secara bathil.
+                    </li>
+                </ul>
+
+                <p>Menurut pendapat saya, fenomena ini menunjukkan betapa pentingnya literasi ekonomi Islam bagi masyarakat. Keinginan untuk mendapatkan keuntungan cepat sering kali membuat orang mengabaikan aspek kejelasan (<em>tabayyun</em>) terhadap objek investasi. Bisnis yang berkah seharusnya mengedepankan transparansi dan keadilan bagi semua pihak, bukan sekadar janji manis yang berujung kerugian.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ── FOOTER ──────────────────────────── -->
     <div class="footer">
-        <p>© 2026 Abdan Rizki Fadhilah - 312410469<br>Teknik Informatika, Universitas Pelita Bangsa</p>
+        &copy; 2026 Abdan Rizki Fadhilah &mdash; 312410469<br>
+        Teknik Informatika, Universitas Pelita Bangsa
     </div>
 
 </div>
