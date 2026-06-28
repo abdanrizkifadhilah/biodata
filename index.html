@@ -196,6 +196,19 @@
             line-height: 1.4;
         }
 
+        .article-body h4 {
+            font-family: 'Lora', Georgia, serif;
+            font-size: clamp(15px, 3.6vw, 17px);
+            color: var(--navy);
+            font-weight: 600;
+            margin: 28px 0 12px 0;
+            line-height: 1.4;
+        }
+
+        .article-body h4:first-of-type {
+            margin-top: 8px;
+        }
+
         .article-body p {
             margin-bottom: 16px;
             text-align: justify;
@@ -274,6 +287,18 @@
             font-size: 15px;
             margin: 0 0 10px 0;
             display: block;
+        }
+
+        .ref-note {
+            margin-top: 14px;
+            margin-bottom: 24px;
+            font-size: 13px;
+            color: var(--muted);
+            line-height: 1.6;
+        }
+
+        .ref-note strong {
+            color: var(--navy);
         }
 
         .analysis-list {
@@ -365,7 +390,7 @@
     <div class="header">
         <div class="avatar-wrap">
             <img src="jpg/1.jpeg" alt="Foto Abdan Rizki Fadhilah"
-                 onerror="this.outerHTML='<div class=\'avatar-placeholder\'>👤</div>'">
+                 onerror="this.outerHTML='&lt;div class=&quot;avatar-placeholder&quot;&gt;👤&lt;/div&gt;'">
         </div>
         <h2>Abdan Rizki Fadhilah</h2>
         <p>Mahasiswa Teknik Informatika &mdash; Semester 4</p>
@@ -440,7 +465,7 @@
 
                 <div class="img-placeholder">
                     <img src="jpg/2.png" alt="Screenshot Metro TV"
-                         onerror="this.parentElement.innerHTML='<p class=\'img-note\'>📺 Screenshot berita Metro TV<br>(gambar akan tampil saat file jpg/2.png tersedia)</p>'">
+                         onerror="this.parentElement.innerHTML='&lt;p class=&quot;img-note&quot;&gt;📺 Screenshot berita Metro TV&lt;br&gt;(gambar akan tampil saat file jpg/2.png tersedia)&lt;/p&gt;'">
                 </div>
 
                 <span class="opini-label">Opini Pribadi &amp; Analisis Syariah:</span>
@@ -482,11 +507,97 @@
         <div class="img-placeholder" style="margin-top: 16px;">
             <img src="jpg/infografis.jpg" alt="Infografis Bisnis Kontemporer Islami"
                  style="max-height: none;"
-                 onerror="this.parentElement.innerHTML='<p class=\'img-note\'>📊 Infografis akan tampil saat file jpg/infografis.jpg tersedia</p>'">
+                 onerror="this.parentElement.innerHTML='&lt;p class=&quot;img-note&quot;&gt;📊 Infografis akan tampil saat file jpg/infografis.jpg tersedia&lt;/p&gt;'">
         </div>
     </div>
 
-    <!-- ── FOOTER ──────────────────────────── -->
+    <div class="divider"></div>
+
+    <!-- ── UAS ────────────────────────────── -->
+    <div class="section">
+        <div class="section-badge"><span>UAS Pendidikan Agama 4</span></div>
+
+        <div class="article-body">
+            <h3>Analisis Regulasi, Perbedaan Lembaga Keuangan, dan Urgensi Tata Kelola Bermoral</h3>
+
+            <h4>1. Pendahuluan</h4>
+            <p>Dalam lanskap ekonomi modern, lembaga keuangan memegang peranan krusial sebagai intermediasi aliran dana masyarakat. Namun, gesekan antara orientasi keuntungan materi dan nilai-nilai moral universal sering kali memicu krisis kepercayaan publik. Islam sebagai sistem hidup yang komprehensif memberikan perhatian besar pada sektor ini melalui aturan muamalah. Secara yuridis dan operasional di Indonesia, institusi keuangan terbelah menjadi dua pilar utama, yaitu Lembaga Keuangan Syariah (LKS) berbentuk perbankan dan Lembaga Keuangan Non-Syariah (Konvensional). Memahami perbedaan fundamental keduanya bukan sekadar kebutuhan akademis, melainkan landasan etis dalam bermuamalah.</p>
+
+            <h4>2. Perbedaan Fundamental Bank Syariah dan Bank Konvensional</h4>
+            <p>Perbedaan mendasar antara perbankan syariah dan non-syariah mencakup aspek filosofis hukum, instrumen keuntungan, hingga mitigasi risiko:</p>
+
+            <div class="mix-grid">
+                <div class="mix-item">
+                    <strong>Asas Hukum dan Pengawasan</strong>
+                    Bank Konvensional beroperasi murni berlandaskan hukum positif Barat dan regulasi sekuler dengan prinsip memaksimalkan keuntungan (profit-oriented). Sementara itu, Bank Syariah tunduk pada regulasi negara sekaligus wajib patuh pada koridor hukum Islam (Prinsip Syariah). Keberadaan Dewan Syariah Nasional (DSN-MUI) dan Dewan Pengawas Syariah (DPS) secara internal memastikan setiap produk terbebas dari unsur destruktif seperti Riba (bunga), Ghoror (ketidakjelasan), dan Maysir (judi).
+                </div>
+                <div class="mix-item">
+                    <strong>Mekanisme Keuntungan</strong>
+                    Sistem konvensional mengandalkan instrumen bunga (interest) yang ditentukan di awal secara sepihak atas persentase pinjaman modal. Sifat bunga ini tetap dan wajib dibayar tanpa memedulikan apakah nasabah untung atau rugi. Sebaliknya, Bank Syariah menerapkan prinsip bagi hasil (profit and loss sharing) melalui akad kemitraan seperti Mudharabah dan Musyarakah, atau menggunakan margin keuntungan tetap lewat transaksi jual beli (Murabahah).
+                </div>
+                <div class="mix-item">
+                    <strong>Sifat Hubungan Hukum</strong>
+                    Hubungan antara bank konvensional dan nasabah adalah hubungan antara Debitur (peminjam) dan Kreditur (pemberi pinjaman). Pada Bank Syariah, hubungan yang tercipta jauh lebih humanis dan setara, yaitu sebagai Mitra Usaha, Penjual-Pembeli, atau Penyewa-Pemilik.
+                </div>
+            </div>
+
+            <h4>3. Studi Kasus Implementasi Syariah: Transparansi Akad Murabahah</h4>
+            <p>Sebagai contoh konkret, pada pembiayaan kepemilikan aset atau hunian, Bank Syariah tidak meminjamkan uang tunai yang kemudian ditarik bunganya secara fluktuatif. Bank akan membeli aset tersebut terlebih dahulu, kemudian menjualnya kembali kepada nasabah dengan harga perolehan ditambah margin keuntungan yang disepakati secara terbuka di awal (Akad Murabahah). Cicilan nasabah bersifat mengikat dan flat hingga akhir tenor, sehingga menutup celah ghoror (ketidakpastian) akibat naik-turunnya suku bunga pasar global yang mencekik.</p>
+
+            <p class="ref-note">
+                <strong>Referensi Ilmiah:</strong><br>
+                • Undang-Undang Republik Indonesia Nomor 21 Tahun 2008 tentang Perbankan Syariah.<br>
+                • Fatwa Dewan Syariah Nasional (DSN) MUI No. 04/DSN-MUI/IV/2000 tentang Murabahah.
+            </p>
+
+            <!-- STUDI KASUS LEMBAGA NON-PERBANKAN -->
+            <div class="case-study">
+                <h3>Potret Krisis Lembaga Keuangan Non-Perbankan (LKNB): Kasus Gagal Bayar Wanaartha Life</h3>
+
+                <div class="img-placeholder">
+                    <img src="jpg/3.png" alt="Screenshot Berita Wanaartha Life"
+                         onerror="this.parentElement.innerHTML='&lt;p class=&quot;img-note&quot;&gt;📰 Screenshot berita Wanaartha Life&lt;br&gt;(gambar akan tampil saat file jpg/3.png tersedia)&lt;/p&gt;'">
+                </div>
+
+                <p>Lembaga Keuangan Non-Perbankan (LKNB) seperti perusahaan asuransi, koperasi simpan pinjam, dan investasi reksa dana memiliki ruang lingkup bisnis yang erat dengan pengumpulan dana publik. Namun, tanpa adanya pondasi moralitas yang kuat, sektor ini rentan runtuh.</p>
+                <p>Sebagai studi kasus nyata, krisis gagal bayar yang melanda PT Asuransi Jiwa Adisarana Wanaartha (Wanaartha Life) menjadi preseden buruk bagi industri LKNB konvensional. Akibat pengelolaan dana yang serampangan dan indikasi rekayasa laporan keuangan, perusahaan mengalami gagal bayar massal atas klaim polis nasabahnya. Puncaknya, izin usaha mereka dicabut oleh Otoritas Jasa Keuangan (OJK), memicu unjuk rasa besar-besaran dari para korban yang menuntut pengembalian hak finansial mereka.</p>
+
+                <span class="opini-label">Analisis Kritis &amp; Opini: "Bagaimana Semestinya?"</span>
+
+                <ul class="analysis-list">
+                    <li>
+                        <strong>Menegakkan Integritas dan Prinsip Amanah</strong>
+                        Manajemen LKNB semestinya memandang dana premi masyarakat sebagai Amanah titipan yang suci, bukan modal gratis untuk berspekulasi secara ugal-ugalan pada instrumen saham berisiko tinggi demi mengejar bonus pribadi. Prinsip kehati-hatian (prudential finance) wajib diletakkan di atas ambisi profit makro.
+                    </li>
+                    <li>
+                        <strong>Pembersihan Unsur Penipuan (Khida') dan Ghoror</strong>
+                        Semestinya tidak boleh ada manipulasi informasi produk atau skema janji keuntungan tetap (fix return) yang tidak rasional demi menggaet konsumen baru. Tindakan pemilik yang melarikan diri hingga diterbitkannya Red Notice merupakan pelanggaran berat terhadap etika bisnis universal dan hukum pidana nasional.
+                    </li>
+                    <li>
+                        <strong>Ketegasan Hukum dan Proteksi Konsumen</strong>
+                        Aparat penegak hukum dan OJK semestinya bertindak lebih responsif dalam melakukan audit investigatif dini. Ketika krisis terjadi, penyitaan aset pengendali harus dilakukan seketika guna memprioritaskan pengembalian uang polis milik nasabah secara utuh, sesuai dengan prinsip keadilan distributif.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+<div class="divider"></div>
+
+    <!-- ── VIDEO PRAKTIK MUAMALAH ─────────── -->
+    <div class="section">
+        <div class="section-badge"><span>Praktik Muamalah</span></div>
+
+        <div class="article-body" style="text-align: center;">
+            <h3 style="display: inline-block; border-left: none; padding-left: 0; text-align: center;">Video Praktik Muamalah</h3>
+            <p style="text-align: center;">Dokumentasi praktik muamalah yang telah dibuat sebagai bagian dari tugas mata kuliah.</p>
+
+            <a href="https://youtu.be/hihIX8efByk" target="_blank" rel="noopener noreferrer"
+               style="display: inline-block; background: var(--blue); color: #fff; text-decoration: none; padding: 12px 28px; border-radius: 50px; font-weight: 700; font-size: 14px; margin-top: 8px;">
+                ▶ Tonton di YouTube
+            </a>
+        </div>
+    </div>
+    <!-- ── FOOTER ──────────────────────────────────── -->
     <div class="footer">
         &copy; 2026 Abdan Rizki Fadhilah &mdash; 312410469<br>
         Teknik Informatika, Universitas Pelita Bangsa
